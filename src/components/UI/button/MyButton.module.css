@@ -1,0 +1,16 @@
+.myBtn {
+    padding: 5px 15px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid red;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.myBtn:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}

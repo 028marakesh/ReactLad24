@@ -1,0 +1,188 @@
+* {
+    margin-top: 0px;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#root { 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:azure;
+}
+
+.App {
+    width: 800px;
+
+}
+
+.post {
+    display: flex;
+    padding: 15px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    
+
+
+}
+
+
+  
+  .post-enter {
+    transform: translateX(-350px);
+  }
+  .post-enter-active {
+    transform: translateX(0px);
+    transition: all 500ms ease-in;
+  }
+  .post-exit {
+    opacity: 1;
+  }
+  .post-exit-active {
+    transform: translateX(-350px);
+    transition: all 500ms ease-in;
+  }
+
+  .page__wrapper {
+    margin-top: 30px;
+    display: flex;
+  }
+
+  .page {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid teal;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .page:hover {
+    background-color: rgb(182, 182, 182);
+  }
+
+
+/* весь контейнер поддерживает перспективу */
+.flip-container {
+ perspective: 1000;
+}
+ /* переверните сторону при проведении мышью */
+ .flip-container:hover .flipper, .flip-container.hover .flipper {
+ transform: rotateY(180deg);
+ }
+ 
+.flip-container, .front, .back {
+  width: 600px;
+  height: 100px;
+
+}
+ 
+/* здесь находится скорость перевертывания */
+.flipper {
+ transition: 0.6s;
+ transform-style: preserve-3d;
+ 
+ position: relative;
+}
+ 
+/* скройте обратную сторону во время переворота */
+.front, .back {
+ backface-visibility: hidden;
+ 
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+ 
+/* лицевая сторона размещена над обратной */
+.front {
+ z-index: 2;
+}
+ 
+/* обратная, изначально скрытая сторона */
+.back {
+ transform: rotateY(180deg);
+}
+
+.navbar {
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: rgb(219, 250, 250);
+
+}
+
+.navbar__links {
+  margin-left: auto;
+  padding:50px;
+}
+
+
+.star-ratio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  font-size: 1em;
+}
+
+.ratio {
+  width: 10em;
+  height: 2em;
+  position: relative;
+  background: url(https://i.stack.imgur.com/HYO64.png);
+  background-size: 2em 2em;
+  background-repeat: repeat-x;
+}
+
+.star-ratio:nth-of-type(1) {
+  width: 2em;
+  z-index: 5;
+}
+
+.star-ratio:nth-of-type(2) {
+  width: 4em;
+  z-index: 4;
+}
+
+.star-ratio:nth-of-type(3) {
+  width: 6em;
+  z-index: 3;
+}
+
+.star-ratio:nth-of-type(4) {
+  width: 8em;
+  z-index: 2;
+}
+
+.star-ratio:nth-of-type(5) {
+  width: 10em;
+  z-index: 1;
+}
+
+.star-ratio:checked,
+.star-ratio:hover {
+  background: url(https://i.stack.imgur.com/XV18m.png);
+  background-size: 2em 2em;
+  background-repeat: repeat-x;
+}
+
+.star-ratio:hover~.star-ratio {
+  background: url(https://i.stack.imgur.com/HYO64.png);
+  background-size: 2em 2em;
+  background-repeat: repeat-x;
+}
+
